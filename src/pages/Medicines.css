@@ -1,0 +1,421 @@
+.medicines-page {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.medicines-page-title {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.medicines-page-intro {
+  color: #34495e;
+  font-size: 1.2rem;
+}
+
+/* Search and Filter Section */
+.search-filter-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7f8c8d;
+  font-size: 1.2rem;
+}
+
+.search-input {
+  padding-left: 3rem;
+  height: 50px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.filter-select {
+  height: 50px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.filter-select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* Results Count */
+.results-count {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Medicine Card */
+.medicine-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.medicine-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.medicine-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.medicine-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.medicine-card:hover .medicine-image {
+  transform: scale(1.1);
+}
+
+.category-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.category-badge.insecticide {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.category-badge.fungicide {
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.category-badge.herbicide {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.category-badge.fertilizer {
+  background: linear-gradient(135deg, #27ae60, #229954);
+}
+
+.category-badge.organic {
+  background: linear-gradient(135deg, #16a085, #138d75);
+}
+
+/* Medicine Content */
+.medicine-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.medicine-name {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.medicine-section {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  color: #34495e;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.section-title svg {
+  color: #3498db;
+}
+
+/* Disease Tags */
+.disease-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.disease-tag {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Nutrient List */
+.nutrient-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.nutrient-list li {
+  padding: 0.4rem 0;
+  color: #27ae60;
+  font-weight: 500;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.nutrient-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: 700;
+}
+
+/* When Needed */
+.when-needed {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  background: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+/* Side Effects List */
+.side-effects-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.side-effects-list li {
+  padding: 0.4rem 0;
+  color: #e74c3c;
+  font-weight: 500;
+  font-size: 0.9rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.side-effects-list li:before {
+  content: "⚠";
+  position: absolute;
+  left: 0;
+  color: #e74c3c;
+}
+
+/* Medicine Details */
+.medicine-details {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: auto;
+}
+
+.detail-row {
+  padding: 0.5rem 0;
+  color: #555;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Benefits List */
+.benefits-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.benefits-list li {
+  padding: 0.3rem 0;
+  color: #27ae60;
+  font-size: 0.85rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.benefits-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: 700;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.no-results svg {
+  color: #bdc3c7;
+}
+
+.no-results h4 {
+  color: #7f8c8d;
+  margin-top: 1rem;
+}
+
+.no-results p {
+  color: #95a5a6;
+}
+
+/* Safety Section */
+.safety-section .alert {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.safety-section .alert-heading {
+  color: #d68910;
+  font-weight: 700;
+}
+
+.safety-section ul {
+  margin-bottom: 0;
+}
+
+.safety-section li {
+  padding: 0.5rem 0;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* Back Button */
+.back-button {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+  background: linear-gradient(135deg, #2980b9, #21618c);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .medicines-page-title {
+    font-size: 1.8rem;
+  }
+
+  .medicines-page-intro {
+    font-size: 1rem;
+  }
+
+  .search-filter-section {
+    padding: 1.5rem;
+  }
+
+  .search-input,
+  .filter-select {
+    height: 45px;
+  }
+
+  .medicine-image-container {
+    height: 180px;
+  }
+
+  .medicine-name {
+    font-size: 1.3rem;
+  }
+
+  .section-title {
+    font-size: 0.95rem;
+  }
+
+  .disease-tag {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .category-badge {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .medicines-page-title {
+    font-size: 1.5rem;
+  }
+
+  .search-filter-section {
+    padding: 1rem;
+  }
+
+  .medicine-content {
+    padding: 1rem;
+  }
+
+  .medicine-image-container {
+    height: 160px;
+  }
+}
