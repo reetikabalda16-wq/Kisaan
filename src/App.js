@@ -19,31 +19,37 @@ import CropDisease from './pages/CropDisease';
 import Medicines from './pages/Medicines';
 import GovernmentSchemes from './pages/Scheme';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Chatbot from './components/Chatbot';
+import { LanguageProvider } from './context/LanguageContext';
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} />} />
-        <Route path="/" element={<MainLayout isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}>
-          <Route index element={<Home />} />
-          <Route path="schemes" element={<GovernmentSchemes />} />
-          <Route path="crop-advisory" element={<CropAdvisory />} />
-          <Route path="farm-mechanization" element={<FarmMechanization />} />
-          <Route path="organic-farming" element={<OrganicFarmingSupport />} />
-          <Route path="soil-testing" element={<SoilTesting />} />
-          <Route path="market-linkages" element={<MarketLinkages />} />
-          <Route path="farmer-helpline" element={<FarmerHelpline />} />
-          <Route path="financial-services" element={<FinancialServices />} />
-          <Route path="weather-forecast" element={<WeatherForecast />} />
-          <Route path="market-info" element={<MarketInfo />} />
-          <Route path="crop-info" element={<CropInfo />} />
-          <Route path="crop-disease" element={<CropDisease />} />
-          <Route path="medicines" element={<Medicines />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} />} />
+          <Route path="/" element={<MainLayout isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}>
+            <Route index element={<Home />} />
+            <Route path="chatbot" element={<Chatbot />} />
+            <Route path="schemes" element={<GovernmentSchemes />} />
+            <Route path="crop-advisory" element={<CropAdvisory />} />
+            <Route path="farm-mechanization" element={<FarmMechanization />} />
+            <Route path="organic-farming" element={<OrganicFarmingSupport />} />
+            <Route path="soil-testing" element={<SoilTesting />} />
+            <Route path="market-linkages" element={<MarketLinkages />} />
+            <Route path="farmer-helpline" element={<FarmerHelpline />} />
+            <Route path="financial-services" element={<FinancialServices />} />
+            <Route path="weather-forecast" element={<WeatherForecast />} />
+            <Route path="market-info" element={<MarketInfo />} />
+            <Route path="crop-info" element={<CropInfo />} />
+            <Route path="crop-disease" element={<CropDisease />} />
+            <Route path="medicines" element={<Medicines />} />
+          </Route>
+        </Routes>
+        <Chatbot />
+      </BrowserRouter>
+    </LanguageProvider>
   );
 }

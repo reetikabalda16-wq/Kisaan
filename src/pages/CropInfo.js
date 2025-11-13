@@ -210,11 +210,11 @@ const CropInfo = () => {
 
       // Find current stage
       const crop = cropDatabase[selectedCrop];
-      const translatedStages = t(`cropInfo.crops.${selectedCrop}.stages`);
-      const stage = translatedStages.find((s, idx) => {
+      const translatedStages = t(`cropInfo.crops.${selectedCrop}.stages`, { returnObjects: true });
+      const stage = translatedStages && Array.isArray(translatedStages) ? translatedStages.find((s, idx) => {
         const [start, end] = crop.stagesDays[idx].days.split('-').map(Number);
         return diffDays >= start && diffDays <= end;
-      });
+      }) : null;
       setCurrentStage(stage);
     }
   }, [plantingDate, selectedCrop, language, t]);
@@ -413,7 +413,7 @@ const CropInfo = () => {
               {/* Growth Stages Timeline */}
               <h3 className="mb-4">{t('cropInfo.completeTimeline')}</h3>
               <div className="timeline">
-                {t(`cropInfo.crops.${selectedCrop}.stages`).map((stage, index) => (
+                {t(`cropInfo.crops.${selectedCrop}.stages`, { returnObjects: true }).map((stage, index) => (
                   <div 
                     key={index} 
                     className={`timeline-item ${currentStage?.name === stage.name ? 'active' : ''}`}

@@ -13,7 +13,7 @@ const OrganicFarmingSupport = () => {
           className="back-button mb-4"
           onClick={() => navigate('/#services')}
         >
-          <FaArrowLeft /> Back to Services
+          <FaArrowLeft /> {t('services.backToServices')}
         </button>
 
         <div className="row align-items-center mb-5">
@@ -25,47 +25,45 @@ const OrganicFarmingSupport = () => {
             />
           </div>
           <div className="col-md-6">
-            <h1 className="service-page-title mb-4">Organic Farming Support</h1>
+            <h1 className="service-page-title mb-4">{t('organicFarmingPage.title')}</h1>
             <p className="service-page-intro">
-              Embrace sustainable and eco-friendly farming with our comprehensive organic farming support. We provide end-to-end guidance to help you transition from conventional to organic farming practices.
+              {t('organicFarmingPage.intro')}
             </p>
           </div>
         </div>
 
         <div className="service-page-content">
-          <h3 className="mb-4">Our Services</h3>
-          
           <div className="features-grid mt-4">
             <div className="feature-card">
-              <h5><strong>Certification Assistance</strong></h5>
-              <p>We guide you through the process of obtaining organic certification for your farm.</p>
+              <h5><strong>{t('organicFarmingPage.certification')}</strong></h5>
+              <p>{t('organicFarmingPage.certificationDesc')}</p>
             </div>
             <div className="feature-card">
-              <h5><strong>Organic Inputs</strong></h5>
-              <p>Access to high-quality organic seeds, fertilizers, and pest control solutions.</p>
+              <h5><strong>{t('organicFarmingPage.inputs')}</strong></h5>
+              <p>{t('organicFarmingPage.inputsDesc')}</p>
             </div>
             <div className="feature-card">
-              <h5><strong>Training and Workshops</strong></h5>
-              <p>Regular training sessions and workshops on organic farming techniques.</p>
+              <h5><strong>{t('organicFarmingPage.training')}</strong></h5>
+              <p>{t('organicFarmingPage.trainingDesc')}</p>
             </div>
             <div className="feature-card">
-              <h5><strong>Market Access</strong></h5>
-              <p>Connect with a premium market of buyers for your organic produce.</p>
+              <h5><strong>{t('organicFarmingPage.marketing')}</strong></h5>
+              <p>{t('organicFarmingPage.marketingDesc')}</p>
             </div>
             <div className="feature-card">
-              <h5><strong>Soil Management</strong></h5>
-              <p>Expert advice on organic soil enrichment and composting methods.</p>
+              <h5><strong>{t('organicFarmingPage.soilHealth')}</strong></h5>
+              <p>{t('organicFarmingPage.soilHealthDesc')}</p>
             </div>
             <div className="feature-card">
-              <h5><strong>Pest Control</strong></h5>
-              <p>Natural and organic pest control solutions without harmful chemicals.</p>
+              <h5><strong>{t('organicFarmingPage.pestControl')}</strong></h5>
+              <p>{t('organicFarmingPage.pestControlDesc')}</p>
             </div>
           </div>
 
           <div className="mt-5 p-4 bg-light rounded">
-            <h4>Join the Organic Revolution</h4>
+            <h4>{t('organicFarmingPage.benefits')}</h4>
             <p className="mb-0">
-              Join the organic farming revolution and contribute to a healthier planet and a more sustainable future. Increase your farm's value while protecting the environment for future generations.
+              {t('organicFarmingPage.benefitsDesc')}
             </p>
           </div>
         </div>

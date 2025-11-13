@@ -421,6 +421,119 @@ const translations = {
       notificationsDesc: 'Instant weather alerts on your phone.',
       benefits: 'Benefits',
       benefitsDesc: 'Accurate weather forecasting helps you plan irrigation, spraying, and harvesting activities effectively.'
+    },
+    chatbot: {
+      toggleButton: 'Chat',
+      header: 'Farmer Assistant',
+      close: 'X',
+      inputPlaceholder: 'Ask a question...',
+      sendButton: 'Send',
+      welcomeMessage: 'Welcome! How can I assist you today?',
+      responses: {
+        cropInfo: 'You can find detailed information about various crops in the "Crop Information" section.',
+        disease: 'Our "Crop Disease" section helps you identify and manage crop diseases. You can even upload images for analysis.',
+        weather: 'Check the "Weather Forecast" section for the latest weather updates for your area.',
+        market: 'For current market prices and trends, please visit the "Market Information" section.',
+        schemes: 'Information about government schemes for farmers is available in the "Government Schemes" section.',
+        soilTesting: 'Visit the "Soil Testing" section to learn about the importance of soil health and how to get your soil tested.',
+        organicFarming: 'The "Organic Farming Support" section provides resources and guidance for sustainable farming practices.',
+        help: 'You can contact our support team through the "Farmer Helpline" section for direct assistance.',
+        greeting: 'Hello! How can I assist you today? You can ask me about crop information, weather, market prices, and more.',
+        default: "I'm sorry, I don't have information on that right now. You can try asking about crop info, diseases, weather, market prices, or government schemes."
+      }
+    },
+    schemesPage: {
+      title: 'Government Schemes for Agriculture',
+      subtitle: 'Explore key initiatives by the Government of India to empower farmers in 2025.',
+      eligibility: 'Eligibility:',
+      benefits: 'Benefits:',
+      learnMore: 'Learn More & Apply',
+      backToHome: 'Back to Home',
+      schemes: {
+        pmKisan: {
+          title: 'Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)',
+          description: 'Provides income support of Rs. 6,000 per year to small and marginal farmers through Direct Benefit Transfer (DBT).',
+          eligibility: 'Landholding farmers with up to 2 hectares.',
+          benefits: 'Financial aid for crop inputs and household needs.'
+        },
+        pmfby: {
+          title: 'Pradhan Mantri Fasal Bima Yojana (PMFBY)',
+          description: 'Crop insurance scheme covering yield losses due to natural calamities, pests, and diseases.',
+          eligibility: 'Farmers with crop loans or insured crops.',
+          benefits: 'Affordable premiums with comprehensive coverage for over 50 crops.'
+        },
+        kcc: {
+          title: 'Kisan Credit Card (KCC)',
+          description: 'Provides short-term credit for cultivation needs at subsidized interest rates.',
+          eligibility: 'All farmers engaged in agriculture and allied activities.',
+          benefits: 'Interest subvention of 2% with additional 3% for prompt repayment.'
+        },
+        soilHealth: {
+          title: 'Soil Health Card Scheme',
+          description: 'Issues soil health cards with nutrient status and fertilizer recommendations.',
+          eligibility: 'All farmers across India.',
+          benefits: 'Promotes balanced fertilizer use for improved soil health.'
+        },
+        digitalAg: {
+          title: 'Digital Agriculture Mission 2025',
+          description: 'Integrates AI, IoT, satellite tech, and data analytics for smart farming.',
+          eligibility: 'Farmers and agri-entrepreneurs adopting digital tools.',
+          benefits: 'Real-time crop monitoring, advisory systems, and resource optimization.'
+        },
+        eNam: {
+          title: 'National Agriculture Market (e-NAM)',
+          description: 'Digital platform linking APMC mandis for pan-India trading.',
+          eligibility: 'Registered farmers and traders.',
+          benefits: 'Transparent pricing, online bidding, and efficient settlements.'
+        },
+        kusum: {
+          title: 'PM Kusum Scheme',
+          description: 'Promotes solar energy in agriculture through pumps and grid-connected plants.',
+          eligibility: 'Farmers with barren/fallow land or existing pumps.',
+          benefits: 'Subsidies up to 50% for solar pumps; sell power to DISCOMs.'
+        },
+        smam: {
+          title: 'Sub-Mission on Agricultural Mechanization (SMAM)',
+          description: 'Supports farm mechanization for small and marginal farmers.',
+          eligibility: 'Farmers purchasing equipment like tractors and harvesters.',
+          benefits: 'Subsidies for machinery; custom hiring centers.'
+        }
+      }
+    },
+    cropDiseasePage: {
+      title: 'Crop Disease Identification',
+      subtitle: 'Upload an image to identify crop diseases and get treatment recommendations',
+      uploadButton: 'Upload Image',
+      analyzeButton: 'Analyze',
+      analyzing: 'Analyzing...',
+      results: 'Analysis Results',
+      disease: 'Disease',
+      confidence: 'Confidence',
+      treatment: 'Treatment',
+      uploadAnother: 'Upload Another Image',
+      instructions: 'Instructions',
+      instruction1: 'Take a clear photo of the affected plant part',
+      instruction2: 'Ensure good lighting and focus',
+      instruction3: 'Upload the image for instant analysis',
+      instruction4: 'Get detailed treatment recommendations'
+    },
+    medicinesPage: {
+      title: 'Agricultural Medicines & Pesticides',
+      subtitle: 'Find the right treatment for your crops',
+      search: 'Search medicines...',
+      category: 'Category',
+      allCategories: 'All Categories',
+      insecticides: 'Insecticides',
+      fungicides: 'Fungicides',
+      herbicides: 'Herbicides',
+      fertilizers: 'Fertilizers',
+      name: 'Name',
+      type: 'Type',
+      usage: 'Usage',
+      dosage: 'Dosage',
+      viewDetails: 'View Details',
+      noMedicinesFound: 'No medicines found',
+      backToHome: 'Back to Home'
     }
   },
   hi: {
@@ -845,10 +958,122 @@ const translations = {
       notificationsDesc: 'आपके फोन पर तत्काल मौसम अलर्ट।',
       benefits: 'लाभ',
       benefitsDesc: 'सटीक मौसम पूर्वानुमान आपको सिंचाई, छिड़काव और कटाई गतिविधियों की प्रभावी ढंग से योजना बनाने में मदद करता है।'
+    },
+    chatbot: {
+      toggleButton: 'चैट',
+      header: 'किसान सहायक',
+      close: 'X',
+      inputPlaceholder: 'कोई प्रश्न पूछें...',
+      sendButton: 'भेजें',
+      welcomeMessage: 'स्वागत है! मैं आज आपकी कैसे मदद कर सकता हूँ?',
+      responses: {
+        cropInfo: 'आप "फसल जानकारी" अनुभाग में विभिन्न फसलों के बारे में विस्तृत जानकारी पा सकते हैं।',
+        disease: 'हमारा "फसल रोग" अनुभाग आपको फसल रोगों की पहचान और प्रबंधन में मदद करता है। आप विश्लेषण के लिए छवियां भी अपलोड कर सकते हैं।',
+        weather: 'अपने क्षेत्र के लिए नवीनतम मौसम अपडेट के लिए "मौसम पूर्वानुमान" अनुभाग देखें।',
+        market: 'वर्तमान बाजार मूल्य और रुझान के लिए, कृपया "बाजार जानकारी" अनुभाग देखें।',
+        schemes: 'किसानों के लिए सरकारी योजनाओं की जानकारी "सरकारी योजनाएं" अनुभाग में उपलब्ध है।',
+        soilTesting: 'मिट्टी के स्वास्थ्य के महत्व और अपनी मिट्टी का परीक्षण कैसे करवाएं, इसके बारे में जानने के लिए "मिट्टी परीक्षण" अनुभाग देखें।',
+        organicFarming: '"जैविक खेती सहायता" अनुभाग टिकाऊ खेती प्रथाओं के लिए संसाधन और मार्गदर्शन प्रदान करता है।',
+        help: 'आप प्रत्यक्ष सहायता के लिए "किसान हेल्पलाइन" अनुभाग के माध्यम से हमारी सहायता टीम से संपर्क कर सकते हैं।',
+        greeting: 'नमस्ते! मैं आज आपकी कैसे मदद कर सकता हूँ? आप मुझसे फसल जानकारी, मौसम, बाजार मूल्य और बहुत कुछ के बारे में पूछ सकते हैं।',
+        default: 'मुझे खेद है, मेरे पास अभी इस पर जानकारी नहीं है। आप फसल जानकारी, रोग, मौसम, बाजार मूल्य, या सरकारी योजनाओं के बारे में पूछने की कोशिश कर सकते हैं।'
+      }
+    },
+    schemesPage: {
+      title: 'कृषि के लिए सरकारी योजनाएं',
+      subtitle: '2025 में किसानों को सशक्त बनाने के लिए भारत सरकार की प्रमुख पहलों का अन्वेषण करें।',
+      eligibility: 'पात्रता:',
+      benefits: 'लाभ:',
+      learnMore: 'और जानें और आवेदन करें',
+      backToHome: 'होम पर वापस जाएं',
+      schemes: {
+        pmKisan: {
+          title: 'प्रधानमंत्री किसान सम्मान निधि (PM-KISAN)',
+          description: 'प्रत्यक्ष लाभ हस्तांतरण (DBT) के माध्यम से छोटे और सीमांत किसानों को प्रति वर्ष 6,000 रुपये की आय सहायता प्रदान करता है।',
+          eligibility: '2 हेक्टेयर तक की भूमि वाले किसान।',
+          benefits: 'फसल इनपुट और घरेलू जरूरतों के लिए वित्तीय सहायता।'
+        },
+        pmfby: {
+          title: 'प्रधानमंत्री फसल बीमा योजना (PMFBY)',
+          description: 'प्राकृतिक आपदाओं, कीटों और बीमारियों के कारण उपज हानि को कवर करने वाली फसल बीमा योजना।',
+          eligibility: 'फसल ऋण या बीमित फसलों वाले किसान।',
+          benefits: '50 से अधिक फसलों के लिए व्यापक कवरेज के साथ किफायती प्रीमियम।'
+        },
+        kcc: {
+          title: 'किसान क्रेडिट कार्ड (KCC)',
+          description: 'सब्सिडी वाली ब्याज दरों पर खेती की जरूरतों के लिए अल्पकालिक ऋण प्रदान करता है।',
+          eligibility: 'कृषि और संबद्ध गतिविधियों में लगे सभी किसान।',
+          benefits: 'समय पर चुकौती के लिए 3% अतिरिक्त के साथ 2% ब्याज सहायता।'
+        },
+        soilHealth: {
+          title: 'मृदा स्वास्थ्य कार्ड योजना',
+          description: 'पोषक तत्व स्थिति और उर्वरक सिफारिशों के साथ मृदा स्वास्थ्य कार्ड जारी करता है।',
+          eligibility: 'पूरे भारत में सभी किसान।',
+          benefits: 'बेहतर मिट्टी स्वास्थ्य के लिए संतुलित उर्वरक उपयोग को बढ़ावा देता है।'
+        },
+        digitalAg: {
+          title: 'डिजिटल कृषि मिशन 2025',
+          description: 'स्मार्ट खेती के लिए AI, IoT, सैटेलाइट तकनीक और डेटा एनालिटिक्स को एकीकृत करता है।',
+          eligibility: 'डिजिटल उपकरण अपनाने वाले किसान और कृषि-उद्यमी।',
+          benefits: 'रीयल-टाइम फसल निगरानी, सलाहकार प्रणाली और संसाधन अनुकूलन।'
+        },
+        eNam: {
+          title: 'राष्ट्रीय कृषि बाजार (e-NAM)',
+          description: 'पैन-इंडिया व्यापार के लिए APMC मंडियों को जोड़ने वाला डिजिटल प्लेटफॉर्म।',
+          eligibility: 'पंजीकृत किसान और व्यापारी।',
+          benefits: 'पारदर्शी मूल्य निर्धारण, ऑनलाइन बोली और कुशल निपटान।'
+        },
+        kusum: {
+          title: 'PM कुसुम योजना',
+          description: 'पंप और ग्रिड से जुड़े संयंत्रों के माध्यम से कृषि में सौर ऊर्जा को बढ़ावा देता है।',
+          eligibility: 'बंजर/परती भूमि या मौजूदा पंप वाले किसान।',
+          benefits: 'सौर पंपों के लिए 50% तक सब्सिडी; DISCOMs को बिजली बेचें।'
+        },
+        smam: {
+          title: 'कृषि यंत्रीकरण पर उप-मिशन (SMAM)',
+          description: 'छोटे और सीमांत किसानों के लिए कृषि यंत्रीकरण का समर्थन करता है।',
+          eligibility: 'ट्रैक्टर और हार्वेस्टर जैसे उपकरण खरीदने वाले किसान।',
+          benefits: 'मशीनरी के लिए सब्सिडी; कस्टम हायरिंग सेंटर।'
+        }
+      }
+    },
+    cropDiseasePage: {
+      title: 'फसल रोग पहचान',
+      subtitle: 'फसल रोगों की पहचान करने और उपचार सिफारिशें प्राप्त करने के लिए एक छवि अपलोड करें',
+      uploadButton: 'छवि अपलोड करें',
+      analyzeButton: 'विश्लेषण करें',
+      analyzing: 'विश्लेषण हो रहा है...',
+      results: 'विश्लेषण परिणाम',
+      disease: 'रोग',
+      confidence: 'विश्वास',
+      treatment: 'उपचार',
+      uploadAnother: 'दूसरी छवि अपलोड करें',
+      instructions: 'निर्देश',
+      instruction1: 'प्रभावित पौधे के हिस्से की स्पष्ट तस्वीर लें',
+      instruction2: 'अच्छी रोशनी और फोकस सुनिश्चित करें',
+      instruction3: 'तुरंत विश्लेषण के लिए छवि अपलोड करें',
+      instruction4: 'विस्तृत उपचार सिफारिशें प्राप्त करें'
+    },
+    medicinesPage: {
+      title: 'कृषि दवाइयाँ और कीटनाशक',
+      subtitle: 'अपनी फसलों के लिए सही उपचार खोजें',
+      search: 'दवाइयाँ खोजें...',
+      category: 'श्रेणी',
+      allCategories: 'सभी श्रेणियाँ',
+      insecticides: 'कीटनाशक',
+      fungicides: 'फफूंदनाशक',
+      herbicides: 'शाकनाशी',
+      fertilizers: 'उर्वरक',
+      name: 'नाम',
+      type: 'प्रकार',
+      usage: 'उपयोग',
+      dosage: 'खुराक',
+      viewDetails: 'विवरण देखें',
+      noMedicinesFound: 'कोई दवाइयाँ नहीं मिलीं',
+      backToHome: 'होम पर वापस जाएं'
     }
-  },
- 
   }
+}
 ;
 
 export default translations;

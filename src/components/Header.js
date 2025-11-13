@@ -4,7 +4,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { FaGlobe } from "react-icons/fa";
 
 const Header = ({ isLoggedIn, setIsLoggedIn }) => {
-  const { language, setLanguage, t } = useLanguage();
+  const { t, language, setLanguage } = useLanguage();
   const navigate = useNavigate();
   const [selectedSeason, setSelectedSeason] = useState('');
 

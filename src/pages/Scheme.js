@@ -3,80 +3,81 @@ import { Link } from "react-router-dom";
 import { useLanguage } from '../context/LanguageContext';
 
 const GovernmentSchemes = () => {
+  const { t } = useLanguage();
+  
   const schemes = [
     {
       id: 1,
-      title: "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
-      description: "Provides income support of Rs. 6,000 per year to small and marginal farmers through Direct Benefit Transfer (DBT).",
-      eligibility: "Landholding farmers with up to 2 hectares.",
-      benefits: "Financial aid for crop inputs and household needs.",
+      title: t('schemesPage.schemes.pmKisan.title'),
+      description: t('schemesPage.schemes.pmKisan.description'),
+      eligibility: t('schemesPage.schemes.pmKisan.eligibility'),
+      benefits: t('schemesPage.schemes.pmKisan.benefits'),
       link: "https://pmkisan.gov.in"
     },
     {
       id: 2,
-      title: "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
-      description: "Crop insurance scheme covering yield losses due to natural calamities, pests, and diseases.",
-      eligibility: "Farmers with crop loans or insured crops.",
-      benefits: "Affordable premiums with comprehensive coverage for over 50 crops.",
+      title: t('schemesPage.schemes.pmfby.title'),
+      description: t('schemesPage.schemes.pmfby.description'),
+      eligibility: t('schemesPage.schemes.pmfby.eligibility'),
+      benefits: t('schemesPage.schemes.pmfby.benefits'),
       link: "https://pmfby.gov.in"
     },
     {
       id: 3,
-      title: "Kisan Credit Card (KCC)",
-      description: "Provides short-term credit for cultivation needs at subsidized interest rates.",
-      eligibility: "All farmers engaged in agriculture and allied activities.",
-      benefits: "Interest subvention of 2% with additional 3% for prompt repayment.",
+      title: t('schemesPage.schemes.kcc.title'),
+      description: t('schemesPage.schemes.kcc.description'),
+      eligibility: t('schemesPage.schemes.kcc.eligibility'),
+      benefits: t('schemesPage.schemes.kcc.benefits'),
       link: "https://www.nabard.org/kcc"
     },
     {
       id: 4,
-      title: "Soil Health Card Scheme",
-      description: "Issues soil health cards with nutrient status and fertilizer recommendations.",
-      eligibility: "All farmers across India.",
-      benefits: "Promotes balanced fertilizer use for improved soil health.",
+      title: t('schemesPage.schemes.soilHealth.title'),
+      description: t('schemesPage.schemes.soilHealth.description'),
+      eligibility: t('schemesPage.schemes.soilHealth.eligibility'),
+      benefits: t('schemesPage.schemes.soilHealth.benefits'),
       link: "https://soilhealth.dac.gov.in"
     },
     {
       id: 5,
-      title: "Digital Agriculture Mission 2025",
-      description: "Integrates AI, IoT, satellite tech, and data analytics for smart farming.",
-      eligibility: "Farmers and agri-entrepreneurs adopting digital tools.",
-      benefits: "Real-time crop monitoring, advisory systems, and resource optimization.",
+      title: t('schemesPage.schemes.digitalAg.title'),
+      description: t('schemesPage.schemes.digitalAg.description'),
+      eligibility: t('schemesPage.schemes.digitalAg.eligibility'),
+      benefits: t('schemesPage.schemes.digitalAg.benefits'),
       link: "https://digitalagriculture.gov.in"
     },
     {
       id: 6,
-      title: "National Agriculture Market (e-NAM)",
-      description: "Digital platform linking APMC mandis for pan-India trading.",
-      eligibility: "Registered farmers and traders.",
-      benefits: "Transparent pricing, online bidding, and efficient settlements.",
+      title: t('schemesPage.schemes.eNam.title'),
+      description: t('schemesPage.schemes.eNam.description'),
+      eligibility: t('schemesPage.schemes.eNam.eligibility'),
+      benefits: t('schemesPage.schemes.eNam.benefits'),
       link: "https://enam.gov.in"
     },
     {
       id: 7,
-      title: "PM Kusum Scheme",
-      description: "Promotes solar energy in agriculture through pumps and grid-connected plants.",
-      eligibility: "Farmers with barren/fallow land or existing pumps.",
-      benefits: "Subsidies up to 50% for solar pumps; sell power to DISCOMs.",
+      title: t('schemesPage.schemes.kusum.title'),
+      description: t('schemesPage.schemes.kusum.description'),
+      eligibility: t('schemesPage.schemes.kusum.eligibility'),
+      benefits: t('schemesPage.schemes.kusum.benefits'),
       link: "https://pmkusum.mnre.gov.in"
     },
     {
       id: 8,
-      title: "Sub-Mission on Agricultural Mechanization (SMAM)",
-      description: "Supports farm mechanization for small and marginal farmers.",
-      eligibility: "Farmers purchasing equipment like tractors and harvesters.",
-      benefits: "Subsidies for machinery; custom hiring centers.",
+      title: t('schemesPage.schemes.smam.title'),
+      description: t('schemesPage.schemes.smam.description'),
+      eligibility: t('schemesPage.schemes.smam.eligibility'),
+      benefits: t('schemesPage.schemes.smam.benefits'),
       link: "https://smam.dac.gov.in"
     }
   ];
- const { t } = useLanguage();
   return (
     <div className="container my-5" id ="schemes">
       {/* Header */}
       <div className="text-center mb-5">
-        <h1 className="display-4 fw-bold text-success">Government Schemes for Agriculture</h1>
+        <h1 className="display-4 fw-bold text-success">{t('schemesPage.title')}</h1>
         <p className="lead text-muted">
-          Explore key initiatives by the Government of India to empower farmers in 2025.
+          {t('schemesPage.subtitle')}
         </p>
       </div>
 
@@ -93,11 +94,11 @@ const GovernmentSchemes = () => {
 
                 <div className="mt-auto">
                   <p className="mb-1">
-                    <strong className="text-success">Eligibility:</strong>{" "}
+                    <strong className="text-success">{t('schemesPage.eligibility')}</strong>{" "}
                     <span className="text-dark">{scheme.eligibility}</span>
                   </p>
                   <p className="mb-3">
-                    <strong className="text-success">Benefits:</strong>{" "}
+                    <strong className="text-success">{t('schemesPage.benefits')}</strong>{" "}
                     <span className="text-dark">{scheme.benefits}</span>
                   </p>
 
@@ -107,7 +108,7 @@ const GovernmentSchemes = () => {
                     rel="noopener noreferrer"
                     className="btn btn-outline-success btn-sm w-100"
                   >
-                    Learn More & Apply
+                    {t('schemesPage.learnMore')}
                   </a>
                 </div>
               </div>
@@ -119,7 +120,7 @@ const GovernmentSchemes = () => {
       {/* Back to Home */}
       <div className="text-center mt-5">
         <Link to="/" className="btn btn-primary btn-lg px-5">
-          Back to Home
+          {t('schemesPage.backToHome')}
         </Link>
       </div>
     </div>

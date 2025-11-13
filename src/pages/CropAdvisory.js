@@ -13,7 +13,7 @@ const CropAdvisory = () => {
           className="back-button mb-4"
           onClick={() => navigate('/#services')}
         >
-          <FaArrowLeft /> Back to Services
+          <FaArrowLeft /> {t('services.backToServices')}
         </button>
 
         <div className="row align-items-center mb-5">
@@ -25,50 +25,50 @@ const CropAdvisory = () => {
             />
           </div>
           <div className="col-md-6">
-            <h1 className="service-page-title mb-4">Crop Advisory</h1>
+            <h1 className="service-page-title mb-4">{t('cropAdvisoryPage.title')}</h1>
             <p className="service-page-intro">
-              Our AI-powered crop advisory service provides personalized recommendations to help you maximize your yield and profitability.
+              {t('cropAdvisoryPage.intro')}
             </p>
           </div>
         </div>
 
         <div className="service-page-content">
-          <h3 className="mb-4">How We Help You</h3>
+          <h3 className="mb-4">{t('cropAdvisoryPage.howWeHelp')}</h3>
           <p>
-            We analyze various factors, including your soil type, local weather conditions, and market demand, to offer the best advice on:
+            {t('cropAdvisoryPage.description')}
           </p>
           
           <div className="features-grid mt-4">
             <div className="feature-card">
-              <h5><strong>Crop Selection</strong></h5>
-              <p>Choosing the most suitable crops for your farm based on soil analysis and market trends.</p>
+              <h5><strong>{t('cropAdvisoryPage.cropSelection')}</strong></h5>
+              <p>{t('cropAdvisoryPage.cropSelectionDesc')}</p>
             </div>
             <div className="feature-card">
-              <h5><strong>Sowing and Planting</strong></h5>
-              <p>Optimal timing and techniques for sowing and planting to ensure best germination.</p>
+              <h5><strong>{t('cropAdvisoryPage.sowingPlanting')}</strong></h5>
+              <p>{t('cropAdvisoryPage.sowingPlantingDesc')}</p>
             </div>
             <div className="feature-card">
-              <h5><strong>Fertilization</strong></h5>
-              <p>Customized fertilizer plans to ensure your crops get the right nutrients at the right time.</p>
+              <h5><strong>{t('cropAdvisoryPage.fertilization')}</strong></h5>
+              <p>{t('cropAdvisoryPage.fertilizationDesc')}</p>
             </div>
             <div className="feature-card">
-              <h5><strong>Pest and Disease Management</strong></h5>
-              <p>Early detection and effective treatment strategies for pests and diseases.</p>
+              <h5><strong>{t('cropAdvisoryPage.pestManagement')}</strong></h5>
+              <p>{t('cropAdvisoryPage.pestManagementDesc')}</p>
             </div>
             <div className="feature-card">
-              <h5><strong>Harvesting</strong></h5>
-              <p>Best practices for harvesting to ensure maximum quality and quantity of produce.</p>
+              <h5><strong>{t('cropAdvisoryPage.harvesting')}</strong></h5>
+              <p>{t('cropAdvisoryPage.harvestingDesc')}</p>
             </div>
             <div className="feature-card">
-              <h5><strong>Market Intelligence</strong></h5>
-              <p>Real-time market insights to help you sell your produce at the best prices.</p>
+              <h5><strong>{t('cropAdvisoryPage.marketIntelligence')}</strong></h5>
+              <p>{t('cropAdvisoryPage.marketIntelligenceDesc')}</p>
             </div>
           </div>
 
           <div className="mt-5 p-4 bg-light rounded">
-            <h4>Our Goal</h4>
+            <h4>{t('cropAdvisoryPage.ourGoal')}</h4>
             <p className="mb-0">
-              Our goal is to empower you with the data and insights you need to make informed decisions and achieve a successful harvest. With our expert guidance, you can increase productivity while reducing costs and environmental impact.
+              {t('cropAdvisoryPage.goalDesc')}
             </p>
           </div>
         </div>
