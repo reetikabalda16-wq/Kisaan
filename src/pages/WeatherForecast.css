@@ -470,27 +470,43 @@
   .forecast-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
+
+  .search-section {
+    padding: 1.5rem;
+  }
+
+  .current-weather-card {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .weather-page {
+    padding-bottom: 2rem;
+  }
+
   .weather-page-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .weather-page-intro {
+    font-size: 1rem;
   }
 
   .location-name {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .current-temp {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .condition-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .weather-icon {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .current-temp-section {
@@ -505,6 +521,16 @@
 
   .search-btn {
     width: 100%;
+    height: 50px;
+  }
+
+  .weather-search-input {
+    height: 50px;
+    padding-left: 3rem;
+  }
+
+  .search-icon {
+    left: 1rem;
   }
 
   .forecast-grid {
@@ -514,6 +540,27 @@
   .advisory-grid {
     grid-template-columns: 1fr;
   }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .location-tags {
+    gap: 0.5rem;
+  }
+
+  .location-tag {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .detail-value {
+    font-size: 1rem;
+  }
+
+  .detail-label {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -521,27 +568,116 @@
     font-size: 1.5rem;
   }
 
+  .weather-page-intro {
+    font-size: 0.95rem;
+  }
+
   .current-weather-card {
     padding: 1.5rem;
   }
 
+  .search-section {
+    padding: 1.25rem;
+  }
+
   .location-name {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .current-temp {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .weather-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .section-title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .forecast-grid {
     grid-template-columns: 1fr;
+  }
+
+  .forecast-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .forecast-day {
+    font-size: 0.95rem;
+  }
+
+  .forecast-temps {
+    margin: 0.75rem 0;
+  }
+
+  .temp-high {
+    font-size: 1.3rem;
+  }
+
+  .temp-low {
+    font-size: 1.1rem;
+  }
+
+  .hourly-card {
+    min-width: 85px;
+    padding: 1.25rem 0.75rem;
+  }
+
+  .hourly-time {
+    font-size: 0.85rem;
+  }
+
+  .hourly-temp {
+    font-size: 1.1rem;
+  }
+
+  .weather-details-grid {
+    gap: 1rem;
+  }
+
+  .weather-detail-item {
+    padding: 0.85rem;
+  }
+
+  .advisory-card h5 {
+    font-size: 1.1rem;
+  }
+
+  .advisory-card p {
+    font-size: 0.9rem;
+  }
+
+  .back-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .weather-page-title {
+    font-size: 1.3rem;
+  }
+
+  .location-name {
+    font-size: 1.2rem;
+  }
+
+  .current-temp {
+    font-size: 1.8rem;
+  }
+
+  .condition-text {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .location-tag {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.8rem;
   }
 }

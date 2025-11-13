@@ -38,7 +38,7 @@ function Slider() {
             alt="Agriculture Drone"
             height="550"
           />
-          <div className="carousel-caption d-none d-md-block">
+          <div className="carousel-caption">
             <h1>{t('slider.welcome')}</h1>
             <p>{t('slider.subtitle')}</p>
           </div>
@@ -53,7 +53,7 @@ function Slider() {
             alt="Farmer in field"
             height="550"
           />
-          <div className="carousel-caption d-none d-md-block">
+          <div className="carousel-caption">
             <h1>{t('slider.subtitle')}</h1>
             <p>{t('slider.description')}</p>
           </div>
@@ -68,7 +68,7 @@ function Slider() {
             alt="Farming landscape"
             height="550"
           />
-          <div className="carousel-caption d-none d-md-block">
+          <div className="carousel-caption">
             <h1>{t('slider.welcome')}</h1>
             <p>{t('slider.description')}</p>
           </div>

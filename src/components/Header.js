@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import { FaGlobe } from "react-icons/fa";
@@ -6,7 +6,7 @@ import { FaGlobe } from "react-icons/fa";
 const Header = ({ isLoggedIn, setIsLoggedIn }) => {
   const { t, language, setLanguage } = useLanguage();
   const navigate = useNavigate();
-  const [selectedSeason, setSelectedSeason] = useState('');
+  const [showCropSubmenu, setShowCropSubmenu] = useState(false);
 
   const languages = [
     { code: 'en', name: 'English' },
@@ -20,9 +20,41 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
   ];
 
   const handleCropInfoWithSeason = (season) => {
-    setSelectedSeason(season);
     navigate('/crop-info', { state: { selectedSeason: season } });
+    setShowCropSubmenu(false);
   };
+
+  const toggleCropSubmenu = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setShowCropSubmenu(!showCropSubmenu);
+  };
+
+  useEffect(() => {
+    // Close submenu when clicking outside
+    const handleClickOutside = (event) => {
+      const submenu = document.querySelector('.dropdown-submenu');
+      if (submenu && !submenu.contains(event.target)) {
+        setShowCropSubmenu(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
+  // Close submenu when parent dropdown closes
+  useEffect(() => {
+    const handleDropdownHide = () => {
+      setShowCropSubmenu(false);
+    };
+
+    const dropdownElement = document.getElementById('navbarDropdown');
+    if (dropdownElement) {
+      dropdownElement.addEventListener('hidden.bs.dropdown', handleDropdownHide);
+      return () => dropdownElement.removeEventListener('hidden.bs.dropdown', handleDropdownHide);
+    }
+  }, []);
 
   return (
     <header className="header">
@@ -93,11 +125,15 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
                       {t('header.marketInfo')}
                     </Link>
                   </li>
-                  <li className="dropdown-submenu">
-                    <a className="dropdown-item dropdown-toggle" href="#crop-info">
+                  <li className={`dropdown-submenu ${showCropSubmenu ? 'show' : ''}`}>
+                    <a 
+                      className="dropdown-item dropdown-toggle" 
+                      href="#crop-info"
+                      onClick={toggleCropSubmenu}
+                    >
                       {t('header.cropInfo')}
                     </a>
-                    <ul className="dropdown-menu">
+                    <ul className={`dropdown-menu ${showCropSubmenu ? 'show' : ''}`}>
                       <li>
                         <Link className="dropdown-item" to="/crop-info">
                           {t('cropInfo.allSeasons')}
